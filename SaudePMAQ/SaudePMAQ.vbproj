@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6953F682-017F-4610-915B-3D0FBB250C33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SaudePMAQ.My.MyApplication</StartupObject>
+    <RootNamespace>SaudePMAQ</RootNamespace>
+    <AssemblyName>SaudePMAQ</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SaudePMAQ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SaudePMAQ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\SPDM\PMAQ\IMAGENS\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar">
+      <HintPath>E:\Libraries\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\SPDM\Projeto_R02\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\SPDM\Projeto_R02\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\SPDM\Projeto_R02\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1400.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\SPDM\Projeto_R02\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1400.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\SPDM\Projeto_R02\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WinFormAnimation">
+      <HintPath>E:\Libraries\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acesso a pasta Usuarios\acesso.vb" />
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AMPI_06\frmAMPI_06.Designer.vb">
+      <DependentUpon>frmAMPI_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AMPI_06\frmAMPI_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AMPI_06\FrmAMPIRelSimples_06.Designer.vb">
+      <DependentUpon>FrmAMPIRelSimples_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AMPI_06\FrmAMPIRelSimples_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Atenção Domiciliar_06\FrmCAD1_06.Designer.vb">
+      <DependentUpon>FrmCAD1_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Atenção Domiciliar_06\FrmCAD1_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Atenção Domiciliar_06\FrmCAD1RelSimples_06.Designer.vb">
+      <DependentUpon>FrmCAD1RelSimples_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Atenção Domiciliar_06\FrmCAD1RelSimples_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AutoMonitoramento Glicemico_06\FrmCAMG_06.Designer.vb">
+      <DependentUpon>FrmCAMG_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AutoMonitoramento Glicemico_06\FrmCAMG_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AutoMonitoramento Glicemico_06\FrmCAMGRelaSimples_06.Designer.vb">
+      <DependentUpon>FrmCAMGRelaSimples_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\AutoMonitoramento Glicemico_06\FrmCAMGRelaSimples_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Diabetes_06\FrmDiabetes_06.Designer.vb">
+      <DependentUpon>FrmDiabetes_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Diabetes_06\FrmDiabetes_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Diabetes_06\FrmDiabetesRelSimples_06.Designer.vb">
+      <DependentUpon>FrmDiabetesRelSimples_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Diabetes_06\FrmDiabetesRelSimples_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Encaminhamento_06\FrmCEncaminhamento_06.Designer.vb">
+      <DependentUpon>FrmCEncaminhamento_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Encaminhamento_06\FrmCEncaminhamento_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Encaminhamento_06\FrmCEncaminhamentoRelSimples_06.Designer.vb">
+      <DependentUpon>FrmCEncaminhamentoRelSimples_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Encaminhamento_06\FrmCEncaminhamentoRelSimples_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmDomiciliados_06.Designer.vb">
+      <DependentUpon>FrmDomiciliados_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmDomiciliados_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmRespDomConsulta_06.Designer.vb">
+      <DependentUpon>FrmRespDomConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmRespDomConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmResponsavelFamilia_06.Designer.vb">
+      <DependentUpon>FrmResponsavelFamilia_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmResponsavelFamilia_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Hipertensão_06\FrmCHipertensos_06.Designer.vb">
+      <DependentUpon>FrmCHipertensos_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Hipertensão_06\FrmCHipertensos_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Hipertensão_06\FrmCHipertensosConsulta_06.Designer.vb">
+      <DependentUpon>FrmCHipertensosConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Hipertensão_06\FrmCHipertensosConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Imuno_06\FrmCImuno_06.Designer.vb">
+      <DependentUpon>FrmCImuno_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Imuno_06\FrmCImuno_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Imuno_06\FrmCImunoConsulta_06.Designer.vb">
+      <DependentUpon>FrmCImunoConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Imuno_06\FrmCImunoConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Internações e òbitos_06\FrmInternacoesObitos_06.Designer.vb">
+      <DependentUpon>FrmInternacoesObitos_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Internações e òbitos_06\FrmInternacoesObitos_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Internações e òbitos_06\FrmInternaObtosConsulta_06.Designer.vb">
+      <DependentUpon>FrmInternaObtosConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Internações e òbitos_06\FrmInternaObtosConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Mãe paulistana_06\FrmCMaePaulistana_06.Designer.vb">
+      <DependentUpon>FrmCMaePaulistana_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Mãe paulistana_06\FrmCMaePaulistana_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Mãe paulistana_06\FrmCMaePaulistanaConsulta_06.Designer.vb">
+      <DependentUpon>FrmCMaePaulistanaConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Mãe paulistana_06\FrmCMaePaulistanaConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NASF_06\FrmNASF_06.Designer.vb">
+      <DependentUpon>FrmNASF_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NASF_06\FrmNASF_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NASF_06\FrmNASFConsulta_06.Designer.vb">
+      <DependentUpon>FrmNASFConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NASF_06\FrmNASFConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NPV_06\FrmCNPV_06.Designer.vb">
+      <DependentUpon>FrmCNPV_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NPV_06\FrmCNPV_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NPV_06\FrmNPVConsulta_06.Designer.vb">
+      <DependentUpon>FrmNPVConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\NPV_06\FrmNPVConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Papanicolau e Mamografia_06\FrmCPapaMamo_06.Designer.vb">
+      <DependentUpon>FrmCPapaMamo_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Papanicolau e Mamografia_06\FrmCPapaMamo_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Papanicolau e Mamografia_06\FrmPapaMamoConsulta_06.Designer.vb">
+      <DependentUpon>FrmPapaMamoConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Papanicolau e Mamografia_06\FrmPapaMamoConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestacional_06.Designer.vb">
+      <DependentUpon>FrmSifilisGestacional_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestacional_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestComp_06.Designer.vb">
+      <DependentUpon>FrmSifilisGestComp_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestComp_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestConsulta_06.Designer.vb">
+      <DependentUpon>FrmSifilisGestConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilisCompanheiro_06.designer.vb">
+      <DependentUpon>FrmSifilisCompanheiro_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilisCompanheiro_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilis_06.Designer.vb">
+      <DependentUpon>FrmSifilis_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilis_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilisConsulta_06.Designer.vb">
+      <DependentUpon>FrmSifilisConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilisConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmComunicante_06.Designer.vb">
+      <DependentUpon>FrmComunicante_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmComunicante_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmTuberculose_06.Designer.vb">
+      <DependentUpon>FrmTuberculose_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmTuberculose_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmTuberculoseConsulta_06.Designer.vb">
+      <DependentUpon>FrmTuberculoseConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmTuberculoseConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Usuários de Fraldas_06\FrmCUsuarioFraldas_06.Designer.vb">
+      <DependentUpon>FrmCUsuarioFraldas_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Usuários de Fraldas_06\FrmCUsuarioFraldas_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Usuários de Fraldas_06\FrmCUsuFraldasConsulta_06.Designer.vb">
+      <DependentUpon>FrmCUsuFraldasConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Usuários de Fraldas_06\FrmCUsuFraldasConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Vigilancia Epidemiologica_06\FRmViEConsulta_06.Designer.vb">
+      <DependentUpon>FRmViEConsulta_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Vigilancia Epidemiologica_06\FRmViEConsulta_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Vigilancia Epidemiologica_06\FrmVIgilanciaEpidemiologica_06.Designer.vb">
+      <DependentUpon>FrmVIgilanciaEpidemiologica_06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipes\Equipe_06\Formularios SubMenu\Vigilancia Epidemiologica_06\FrmVIgilanciaEpidemiologica_06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exemplos de código\Grandes aplicações\codigo.vb" />
+    <Compile Include="Exemplos de código\Media Aplicações\media.vb" />
+    <Compile Include="Exemplos de código\Pequenas aplicações\formulariofilho.vb" />
+    <Compile Include="Exemplos de código\Pequenas aplicações\formularioprincipal.vb" />
+    <Compile Include="Menus\DashBoards\FrmMenuDashBoard.Designer.vb">
+      <DependentUpon>FrmMenuDashBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\DashBoards\FrmMenuDashBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\MenuCadastros\FrmMenuCadastros.Designer.vb">
+      <DependentUpon>FrmMenuCadastros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\MenuCadastros\FrmMenuCadastros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\Relatorios\FrmMenuRelatorio.Designer.vb">
+      <DependentUpon>FrmMenuRelatorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\Relatorios\FrmMenuRelatorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Módulos\Botoes.vb" />
+    <Compile Include="Módulos\CNS.vb" />
+    <Compile Include="Módulos\Data.vb" />
+    <Compile Include="Módulos\NumeroProntuario.vb" />
+    <Compile Include="Módulos\Telefone.vb" />
+    <Compile Include="Perfil de usuario\Editar\FrmEditarPerfil.Designer.vb">
+      <DependentUpon>FrmEditarPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil de usuario\Editar\FrmEditarPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senha Recovery\FrmRecoveryPassword.Designer.vb">
+      <DependentUpon>FrmRecoveryPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Senha Recovery\FrmRecoveryPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas Principais\FrmLogin.designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas Principais\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas Principais\FrmTelaPrincipal.Designer.vb">
+      <DependentUpon>FrmTelaPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas Principais\FrmTelaPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas Principais\FrmWelcome.designer.vb">
+      <DependentUpon>FrmWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas Principais\FrmWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\AMPI_06\frmAMPI_06.resx">
+      <DependentUpon>frmAMPI_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\AMPI_06\FrmAMPIRelSimples_06.resx">
+      <DependentUpon>FrmAMPIRelSimples_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Atenção Domiciliar_06\FrmCAD1_06.resx">
+      <DependentUpon>FrmCAD1_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Atenção Domiciliar_06\FrmCAD1RelSimples_06.resx">
+      <DependentUpon>FrmCAD1RelSimples_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\AutoMonitoramento Glicemico_06\FrmCAMG_06.resx">
+      <DependentUpon>FrmCAMG_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\AutoMonitoramento Glicemico_06\FrmCAMGRelaSimples_06.resx">
+      <DependentUpon>FrmCAMGRelaSimples_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Diabetes_06\FrmDiabetes_06.resx">
+      <DependentUpon>FrmDiabetes_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Diabetes_06\FrmDiabetesRelSimples_06.resx">
+      <DependentUpon>FrmDiabetesRelSimples_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Encaminhamento_06\FrmCEncaminhamento_06.resx">
+      <DependentUpon>FrmCEncaminhamento_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Encaminhamento_06\FrmCEncaminhamentoRelSimples_06.resx">
+      <DependentUpon>FrmCEncaminhamentoRelSimples_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\Consultas\RelatorioFamilia.rdlc" />
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmDomiciliados_06.resx">
+      <DependentUpon>FrmDomiciliados_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmRespDomConsulta_06.resx">
+      <DependentUpon>FrmRespDomConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Familia_06\FrmResponsavelFamilia_06.resx">
+      <DependentUpon>FrmResponsavelFamilia_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Hipertensão_06\FrmCHipertensos_06.resx">
+      <DependentUpon>FrmCHipertensos_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Hipertensão_06\FrmCHipertensosConsulta_06.resx">
+      <DependentUpon>FrmCHipertensosConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Imuno_06\FrmCImuno_06.resx">
+      <DependentUpon>FrmCImuno_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Imuno_06\FrmCImunoConsulta_06.resx">
+      <DependentUpon>FrmCImunoConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Internações e òbitos_06\FrmInternacoesObitos_06.resx">
+      <DependentUpon>FrmInternacoesObitos_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Internações e òbitos_06\FrmInternaObtosConsulta_06.resx">
+      <DependentUpon>FrmInternaObtosConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Mãe paulistana_06\FrmCMaePaulistana_06.resx">
+      <DependentUpon>FrmCMaePaulistana_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Mãe paulistana_06\FrmCMaePaulistanaConsulta_06.resx">
+      <DependentUpon>FrmCMaePaulistanaConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\NASF_06\FrmNASF_06.resx">
+      <DependentUpon>FrmNASF_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\NASF_06\FrmNASFConsulta_06.resx">
+      <DependentUpon>FrmNASFConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\NPV_06\FrmCNPV_06.resx">
+      <DependentUpon>FrmCNPV_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\NPV_06\FrmNPVConsulta_06.resx">
+      <DependentUpon>FrmNPVConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Papanicolau e Mamografia_06\FrmCPapaMamo_06.resx">
+      <DependentUpon>FrmCPapaMamo_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Papanicolau e Mamografia_06\FrmPapaMamoConsulta_06.resx">
+      <DependentUpon>FrmPapaMamoConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestacional_06.resx">
+      <DependentUpon>FrmSifilisGestacional_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestComp_06.resx">
+      <DependentUpon>FrmSifilisGestComp_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis Gestacional_06\FrmSifilisGestConsulta_06.resx">
+      <DependentUpon>FrmSifilisGestConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilisCompanheiro_06.resx">
+      <DependentUpon>FrmSifilisCompanheiro_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilis_06.resx">
+      <DependentUpon>FrmSifilis_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Sifilis_06\FrmSifilisConsulta_06.resx">
+      <DependentUpon>FrmSifilisConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmComunicante_06.resx">
+      <DependentUpon>FrmComunicante_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmTuberculose_06.resx">
+      <DependentUpon>FrmTuberculose_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Tuberculose_06\FrmTuberculoseConsulta_06.resx">
+      <DependentUpon>FrmTuberculoseConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Usuários de Fraldas_06\FrmCUsuarioFraldas_06.resx">
+      <DependentUpon>FrmCUsuarioFraldas_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Usuários de Fraldas_06\FrmCUsuFraldasConsulta_06.resx">
+      <DependentUpon>FrmCUsuFraldasConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Vigilancia Epidemiologica_06\FRmViEConsulta_06.resx">
+      <DependentUpon>FRmViEConsulta_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipes\Equipe_06\Formularios SubMenu\Vigilancia Epidemiologica_06\FrmVIgilanciaEpidemiologica_06.resx">
+      <DependentUpon>FrmVIgilanciaEpidemiologica_06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\DashBoards\FrmMenuDashBoard.resx">
+      <DependentUpon>FrmMenuDashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\MenuCadastros\FrmMenuCadastros.resx">
+      <DependentUpon>FrmMenuCadastros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\Relatorios\FrmMenuRelatorio.resx">
+      <DependentUpon>FrmMenuRelatorio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil de usuario\Editar\FrmEditarPerfil.resx">
+      <DependentUpon>FrmEditarPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senha Recovery\FrmRecoveryPassword.resx">
+      <DependentUpon>FrmRecoveryPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas Principais\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas Principais\FrmTelaPrincipal.resx">
+      <DependentUpon>FrmTelaPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas Principais\FrmWelcome.resx">
+      <DependentUpon>FrmWelcome.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Resources\BtnDashBoard.png" />
+    <None Include="Resources\BtnRelatorioGr.png" />
+    <None Include="Resources\BtnCadastrosGr.png" />
+    <None Include="Resources\BtnCadastros.png" />
+    <None Include="Resources\relatorio.png" />
+    <None Include="Resources\grafico.png" />
+    <None Include="Resources\gooddoctor1.png" />
+    <None Include="Resources\server.png" />
+    <None Include="Resources\estaticas1.png" />
+    <None Include="Resources\CEMITERIO.png" />
+    <None Include="Resources\pessoas.png" />
+    <None Include="Resources\AMPI1.png" />
+    <None Include="Resources\adults.png" />
+    <None Include="Resources\jovem.png" />
+    <None Include="Resources\Jovem adultos1.png" />
+    <None Include="Resources\Jovem adultos.png" />
+    <None Include="Resources\adolecentas.png" />
+    <None Include="Resources\crianças.png" />
+    <None Include="Resources\Bebe.png" />
+    <None Include="Resources\Area.png" />
+    <None Include="Resources\Equipe.png" />
+    <None Include="Resources\Limpar.png" />
+    <None Include="Resources\Excluir.png" />
+    <None Include="Resources\Salvar.png" />
+    <None Include="Resources\Database.png" />
+    <None Include="Resources\Tuberculose.png" />
+    <None Include="Resources\Sifilis.png" />
+    <None Include="Resources\Epidemiologica.png" />
+    <None Include="Resources\eps.png" />
+    <None Include="Resources\Diabetes.png" />
+    <None Include="Resources\AMPI.png" />
+    <None Include="Resources\Hospital.png" />
+    <None Include="Resources\mulherPaciente.png" />
+    <None Include="Resources\mulher.png" />
+    <None Include="Resources\NASF.png" />
+    <None Include="Resources\FRALDAS.png" />
+    <None Include="Resources\Hiper.png" />
+    <None Include="Resources\Mae Paulistana.png" />
+    <None Include="Resources\AMG.png" />
+    <None Include="Resources\Encaminhamento.png" />
+    <None Include="Resources\AD1.png" />
+    <None Include="Resources\NPV_1.png" />
+    <None Include="Resources\NPV.png" />
+    <None Include="Resources\Imuno.png" />
+    <None Include="Resources\Consulta_Form.png" />
+    <None Include="Resources\Responsavel.png" />
+    <None Include="Resources\Familia.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\cadastro.png" />
+    <None Include="Resources\align_text_distribute [#914].png" />
+    <None Include="Resources\funcionarios1.png" />
+    <None Include="Resources\funcionarios.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\LogoBT1.png" />
+    <None Include="Resources\SAUDE+PMAQ.png" />
+    <None Include="Resources\arrow_right [#392]1.png" />
+    <None Include="Resources\arrow_right [#392].png" />
+    <None Include="Resources\arrow_right_corner [#281].png" />
+    <None Include="Resources\arrow_corner [#282].png" />
+    <None Include="Resources\arrow_in_down [#345].png" />
+    <None Include="Resources\arrow_all [#378].png" />
+    <None Include="Resources\arrow_left [#391].png" />
+    <None Include="Resources\arrow_in_left [#390].png" />
+    <None Include="Resources\LOGO_ESF.png" />
+    <None Include="Resources\candidate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Consolidado\Geral\" />
+    <Folder Include="Consolidado\Por Area\" />
+    <Folder Include="Equipes\Equipe_00\" />
+    <Folder Include="Equipes\Equipe_01\" />
+    <Folder Include="Equipes\Equipe_02\" />
+    <Folder Include="Equipes\Equipe_03\" />
+    <Folder Include="Equipes\Equipe_04\" />
+    <Folder Include="Equipes\Equipe_05\" />
+    <Folder Include="Equipes\Equipe_06\Formularios SubMenu\AMPI_06\Consultas\" />
+    <Folder Include="Estrutura Dashboard\" />
+    <Folder Include="Estrutura de relatorios\" />
+    <Folder Include="Perfil de usuario\Cadastro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPDM\Projeto novo\ClassLibrary1\DominioPMAQ.vbproj">
+      <Project>{6c20a117-7eca-45fc-af9c-22088eeaf76f}</Project>
+      <Name>DominioPMAQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPDM\Projeto novo\SuportePMAQ\SuportePMAQ.vbproj">
+      <Project>{27a4d1b4-f13e-4c92-a454-8d02fc9661bb}</Project>
+      <Name>SuportePMAQ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
